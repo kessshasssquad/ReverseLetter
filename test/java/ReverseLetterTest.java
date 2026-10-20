@@ -1,9 +1,8 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 
 public class ReverseLetterTest {
+
     @Test
     void testReverseLetter() {
         String expected = "t@eb eht av$J!123";
@@ -11,6 +10,7 @@ public class ReverseLetterTest {
         String actual = ReverseLetter.reverseLetters(input);
         assertEquals(expected, actual);
     }
+
     @Test
     void testEmptyString() {
         String input = "";
@@ -18,6 +18,7 @@ public class ReverseLetterTest {
         String actual = ReverseLetter.reverseLetters(input);
         assertEquals(expected,actual);
     }
+
     @Test
     void testSingleLetter() {
         String expected = "a";
@@ -25,6 +26,7 @@ public class ReverseLetterTest {
         String actual = ReverseLetter.reverseLetters(input);
         assertEquals(expected,actual);
     }
+
     @Test
     void testNoLetters() {
         String expected = "123 !@#";
@@ -32,6 +34,7 @@ public class ReverseLetterTest {
         String actual = ReverseLetter.reverseLetters(input);
         assertEquals(expected,actual);
     }
+
     @Test
     void testOnlyLetters() {
         String input = "abcd";
@@ -39,6 +42,7 @@ public class ReverseLetterTest {
         String actual = ReverseLetter.reverseLetters(input);
         assertEquals(expected,actual);
     }
+
     @Test
     void testSpecialCharacters() {
         String input = "!ab@cd#";
@@ -46,6 +50,7 @@ public class ReverseLetterTest {
         String actual = ReverseLetter.reverseLetters(input);
         assertEquals(expected, actual);
     }
+
     @Test
     void testUpperLowerCase() {
         String input = "AbCd";
@@ -53,13 +58,11 @@ public class ReverseLetterTest {
         String actual = ReverseLetter.reverseLetters(input);
         assertEquals(expected, actual);
     }
+
     @Test
     void testNull() {
-        assertThrows(NullPointerException.class, () -> ReverseLetter.reverseLetters(null));
-
+        String expected = "";
+        String actual = ReverseLetter.reverseLetters(null);
+        assertEquals(expected, actual);
     }
-
-
-
-
 }
